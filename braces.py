@@ -10,8 +10,26 @@ def braces(s):
                 return False
     return not stack
 
-braces_input = input("Enter braces: \nValid braces: {}()[]\n")
-if braces(braces_input):
-    print("Valid")
-else:
-    print("Invalid")
+def palindrome(word):
+    if word == word[::-1]:
+        return True
+
+def main():
+    while True:
+        task = input("Check the parentheses: press '1'\nCheck if palindrome: press '2'\nQuit: press 'q'\n")
+        if task == '1':
+            braces_input = input("Enter braces: \nValid braces: {}()[]\n")
+            if braces(braces_input):
+                print("Valid braces")
+            else:
+                print("Invalid braces")
+        elif task == '2':
+            word = input("Enter a string: ")
+            if palindrome(word):
+                print("Its a palindrome")
+            else:
+                print("Not a palindrome")
+        elif task == 'q':
+            break
+
+main()
