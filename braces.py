@@ -12,6 +12,6 @@ def braces(s):
 
 braces_input = input("Enter braces: \nValid braces: {}()[]\n")
 if braces(braces_input):
-    print("YES")
+    print("Valid")
 else:
-    print("NO")
+    print("Invalid")
