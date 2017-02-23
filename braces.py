@@ -2,13 +2,13 @@ def braces(s):
     BRACES = { '(': ')', '[': ']', '{': '}' }
     stack = []
     for b in s:
-        for i in b:
-            c = BRACES.get(b)
-            if c:
-                stack.append(c)
-            elif not stack or stack.pop() != b:
-                return False
+        c = BRACES.get(b)
+        if c:
+            stack.append(c)
+        elif not stack or stack.pop() != b:
+            return False
     return not stack
+
 
 def palindrome(word):
     if word == word[::-1]:
